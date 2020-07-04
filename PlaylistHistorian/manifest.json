@@ -1,11 +1,9 @@
 {
 	"name": "Playlist Historian",
-	"version": "1.0",
+	"version": "1.1",
 	"description": "Save your Youtube playlists to a local file. Never lose an old favorite again.",
 	"permissions": [
-		"activeTab",
 		"declarativeContent",
-		"storage",
 		"downloads"
 	],
 	"background": {

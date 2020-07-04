@@ -1,0 +1,33 @@
+{
+	"name": "Playlist Historian",
+	"version": "1.0",
+	"description": "Save your Youtube playlists to a local file. Never lose an old favorite again.",
+	"permissions": [
+		"activeTab",
+		"declarativeContent",
+		"storage",
+		"downloads"
+	],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+	   {
+	     "matches": ["https://www.youtube.com/playlist*"],
+	     "js": ["contentScript.js"],
+	     "run_at": "document_start"
+	   }
+ 	],
+	"page_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"128": "images/save_128_clear.png"
+		}
+	},
+	"options_page": "options.html",
+	"icons": {
+		"128": "images/save_128_clear.png"
+	},
+	"manifest_version": 2
+}
